@@ -1,6 +1,10 @@
+// Used for path manipulations
+const path = require("path");
+
+// Laravel mix main dep
 let mix = require('laravel-mix');
 
-require('laravel-mix-handlebars');
+// Use browser sync
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 mix
