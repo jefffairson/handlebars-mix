@@ -7,6 +7,11 @@ let mix = require('laravel-mix');
 // Use browser sync
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+// Configure handlebars, project data are stored as json in the data folder
+const HandlebarsPlugin = require("handlebars-webpack-plugin");
+const mergeJSON = require('handlebars-webpack-plugin/utils/mergeJSON');
+const projectData = mergeJSON(path.join(__dirname, "src/data/**/*.json"));
+
 mix
   .webpackConfig(() => {
     return {
