@@ -105,3 +105,6 @@ dist
 
 # Lock files
 yarn.lock
+
+# Public folder
+public/
