@@ -1,4 +1,8 @@
 let mix = require('laravel-mix');
 
-mix.js('src/assets/js/app.js', 'public/assets/js')
-    .setPublicPath('public');
+require('laravel-mix-handlebars');
+
+mix
+  .js('src/assets/js/app.js', 'public/assets/js')
+  .handlebars('src/', 'public/')
+  .setPublicPath('public');
