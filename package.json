@@ -1,0 +1,47 @@
+{
+  "name": "handlebars.mix",
+  "version": "1.0.0",
+  "description": "Quick setup tu use Laravel Mix & Handlebars for quicker HTML pages development",
+  "author": "jeFFF @ Tisseur de toile",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12 <14"
+  },
+  "main": "src/assets/js/app.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefffairson/handlebars-mix.git"
+  },
+  "keywords": [
+    "handlebars",
+    "laravel",
+    "laravel-mix"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "handlebars": "^4.7.7",
+    "handlebars-layouts": "^3.1.4",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "laravel-mix": "^6.0",
+    "laravel-mix-purgecss": "^6.0.0",
+    "postcss": "^8.1",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.8",
+    "sass-loader": "10.*"
+  },
+  "bugs": {
+    "url": "https://github.com/jefffairson/handlebars-mix/issues"
+  },
+  "homepage": "https://github.com/jefffairson/handlebars-mix#readme"
+}
