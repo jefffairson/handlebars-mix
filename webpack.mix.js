@@ -16,4 +16,5 @@ mix
   })
   .handlebars('src/', 'public/')
   .js('src/assets/js/app.js', 'public/assets/js')
+  .sass('src/assets/sass/app.scss', 'public/css')
   .setPublicPath('public');
