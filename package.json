@@ -2,6 +2,9 @@
   "name": "handlebars.mix",
   "version": "1.0.0",
   "description": "Quick setup tu use Laravel Mix & Handlebars for quicker HTML pages development",
+  "engines": {
+    "node": ">=12 <14"
+  },
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +20,9 @@
   ],
   "author": "jeFFF @ Tisseur de toile",
   "license": "MIT",
+  "devDependencies": {
+    "laravel-mix": "^6.0"
+  },
   "bugs": {
     "url": "https://github.com/jefffairson/handlebars-mix/issues"
   },
