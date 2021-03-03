@@ -30,3 +30,4 @@ mix
   })
   .js('src/assets/js/app.js', 'assets/js')
   .sass('src/assets/sass/app.scss', 'assets/css/app.css')
+  .setPublicPath('public')
