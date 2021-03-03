@@ -32,6 +32,7 @@
     "handlebars-layouts": "^3.1.4",
     "laravel-mix": "^6.0",
     "laravel-mix-handlebars": "^1.0.3",
+    "laravel-mix-purgecss": "^6.0.0",
     "postcss": "^8.1"
   },
   "bugs": {
