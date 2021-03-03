@@ -2,6 +2,8 @@
   "name": "handlebars.mix",
   "version": "1.0.0",
   "description": "Quick setup tu use Laravel Mix & Handlebars for quicker HTML pages development",
+  "author": "jeFFF @ Tisseur de toile",
+  "license": "MIT",
   "engines": {
     "node": ">=12 <14"
   },
@@ -23,8 +25,6 @@
     "laravel",
     "laravel-mix"
   ],
-  "author": "jeFFF @ Tisseur de toile",
-  "license": "MIT",
   "devDependencies": {
     "laravel-mix": "^6.0"
   },
