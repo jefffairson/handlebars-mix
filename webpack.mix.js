@@ -1,5 +1,6 @@
 // Used for path manipulations
 const path = require("path");
+const tailwindcss = require('tailwindcss');
 
 // Laravel mix main dep
 let mix = require('laravel-mix');
@@ -37,5 +38,9 @@ mix
   })
   .js('src/assets/js/app.js', 'assets/js')
   .sass('src/assets/sass/app.scss', 'assets/css/app.css')
+  .options({
+    processCssUrls: false,
+    postCss: [ tailwindcss('./tailwind.config.js') ],
+  })
   .setPublicPath('public')
   .version();
