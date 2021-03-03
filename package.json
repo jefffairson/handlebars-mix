@@ -1,0 +1,24 @@
+{
+  "name": "handlebars.mix",
+  "version": "1.0.0",
+  "description": "Quick setup tu use Laravel Mix & Handlebars for quicker HTML pages development",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefffairson/handlebars-mix.git"
+  },
+  "keywords": [
+    "handlebars",
+    "laravel",
+    "laravel-mix"
+  ],
+  "author": "jeFFF @ Tisseur de toile",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jefffairson/handlebars-mix/issues"
+  },
+  "homepage": "https://github.com/jefffairson/handlebars-mix#readme"
+}
