@@ -25,6 +25,10 @@ mix
           entry: path.join(process.cwd(), "src", "*.hbs"),
           output: path.join(process.cwd(), "public", "[name].html"),
           data: projectData,
+          partials: [
+            path.join(process.cwd(), "src", "partials", "*.hbs"),
+            path.join(process.cwd(), "src", "layouts", "*.hbs")
+          ],
           helpers: {
             assetsManifest: function(value) {
               var manifestPath = path.join(process.cwd(), "public", "mix-manifest.json");
