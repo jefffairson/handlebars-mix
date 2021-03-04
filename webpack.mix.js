@@ -9,6 +9,7 @@ let mix = require('laravel-mix');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 // Configure handlebars, project data are stored as json in the data folder
+var Handlebars = require('handlebars');
 const HandlebarsPlugin = require("handlebars-webpack-plugin");
 const mergeJSON = require('handlebars-webpack-plugin/utils/mergeJSON');
 const projectData = mergeJSON(path.join(__dirname, "src/data/**/*.json"));
@@ -24,13 +25,21 @@ mix
         new HandlebarsPlugin({
           entry: path.join(process.cwd(), "src", "*.hbs"),
           output: path.join(process.cwd(), "public", "[name].html"),
-          data: path.join(__dirname, "src/data/project.json"),
+          data: projectData,
+          partials: [
+            path.join(process.cwd(), "src", "partials", "*.hbs"),
+            path.join(process.cwd(), "src", "layouts", "*.hbs")
+          ],
           helpers: {
             assetsManifest: function(value) {
               var manifestPath = path.join(process.cwd(), "public", "mix-manifest.json");
               manifest = require(manifestPath);
               return manifest[value];
             }
+          },
+          onBeforeSetup: function (Handlebars) {
+            var layouts = require('handlebars-layouts');
+            Handlebars.registerHelper(layouts(Handlebars));
           },
         })
       ]
