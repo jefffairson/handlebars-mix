@@ -27,6 +27,7 @@
     "laravel-mix"
   ],
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
     "browser-sync": "^2.26.14",
     "browser-sync-webpack-plugin": "^2.3.0",
     "cross-env": "^7.0.3",
@@ -35,10 +36,11 @@
     "handlebars-webpack-plugin": "^2.2.1",
     "laravel-mix": "^6.0",
     "laravel-mix-purgecss": "^6.0.0",
-    "postcss": "^8.1",
+    "postcss": "^8.2.6",
     "resolve-url-loader": "^3.1.2",
     "sass": "^1.32.8",
-    "sass-loader": "10.*"
+    "sass-loader": "10.*",
+    "tailwindcss": "^2.0.3"
   },
   "bugs": {
     "url": "https://github.com/jefffairson/handlebars-mix/issues"
