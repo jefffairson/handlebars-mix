@@ -24,7 +24,7 @@ mix
         new HandlebarsPlugin({
           entry: path.join(process.cwd(), "src", "*.hbs"),
           output: path.join(process.cwd(), "public", "[name].html"),
-          data: path.join(__dirname, "src/data/project.json"),
+          data: projectData,
           helpers: {
             assetsManifest: function(value) {
               var manifestPath = path.join(process.cwd(), "public", "mix-manifest.json");
