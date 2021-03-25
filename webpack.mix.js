@@ -28,6 +28,7 @@ mix
           data: projectData,
           partials: [
             path.join(process.cwd(), "src", "partials", "*.hbs"),
+            path.join(process.cwd(), "src", "partials", "*", "*.hbs"),
             path.join(process.cwd(), "src", "layouts", "*.hbs")
           ],
           helpers: {
