@@ -12,14 +12,32 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var Handlebars = require('handlebars');
 const HandlebarsPlugin = require("handlebars-webpack-plugin");
 const mergeJSON = require('handlebars-webpack-plugin/utils/mergeJSON');
-const projectData = mergeJSON(path.join(__dirname, "src/data/**/*.json"));
+const projectData = mergeJSON(path.join(__dirname, "src/data/*.json"));
+projectData.allPaths = {
+  imgPath: (process.env.NODE_ENV === 'production')
+    ? process.env.MIX_URL_PICS
+    : 'http://localhost:3000/'
+}
 
 mix
   .webpackConfig(() => {
     return {
+      resolve: {
+        alias: {
+          '~': path.resolve(__dirname, 'node_modules/')
+        }
+      },
       plugins: [
         new BrowserSyncPlugin({
           watch: true,
+          watchEvents: [
+            'add',
+            'change',
+          ],
+          files: [
+            'src/*.hbs',
+            'src/data/*.json',
+          ],
           server: { baseDir: ['public'] }
         }),
         new HandlebarsPlugin({
