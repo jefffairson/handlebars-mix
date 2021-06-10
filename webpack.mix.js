@@ -47,8 +47,7 @@ mix
           partials: [
             path.join(process.cwd(), "src", "partials", "*.hbs"),
             path.join(process.cwd(), "src", "partials", "*", "*.hbs"),
-            path.join(process.cwd(), "src", "layouts", "*.hbs"),
-            path.join(process.cwd(), "src", "data", "**", "*.json")
+            path.join(process.cwd(), "src", "layouts", "*.hbs")
           ],
           helpers: {
             assetsManifest: function(value) {
