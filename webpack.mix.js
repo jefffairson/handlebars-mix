@@ -1,4 +1,5 @@
 // Used for path manipulations
+const fs = require('fs');
 const path = require("path");
 const tailwindcss = require('tailwindcss');
 
@@ -52,8 +53,14 @@ mix
           helpers: {
             assetsManifest: function(value) {
               var manifestPath = path.join(process.cwd(), "public", "mix-manifest.json");
-              manifest = require(manifestPath);
-              return manifest[value];
+              fs.access('./public' + value, fs.F_OK, (err) => {
+                if (err) {
+                  console.error(err)
+                  return
+                }
+                manifest = require(manifestPath);
+                return manifest[value];
+              })
             }
           },
           onBeforeSetup: function (Handlebars) {
