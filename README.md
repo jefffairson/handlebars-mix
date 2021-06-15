@@ -5,7 +5,7 @@ Quick setup for Handlebars &amp; Laravel mix to speep up simple HTML pages devel
 ## Installation
 
 1. first, install all packages ```yarn install``` on ```npm install```
-2. watch process with ```yarn watch``` on ```npm watch```
+2. watch process with ```yarn watch``` on ```npm run watch```
 
 This package use tailwind CSS. When you run production mode, it will purge all unused CSS.  
-3. to go in production simply run ```yarn production``` or ```npm production```
+3. to go in production simply run ```yarn production``` or ```npm run production```
